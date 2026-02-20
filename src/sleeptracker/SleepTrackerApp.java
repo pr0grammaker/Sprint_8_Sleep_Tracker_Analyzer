@@ -37,7 +37,7 @@ public class SleepTrackerApp {
                 Введите путь к Вашему файлу с логом сна:
                 """);
         Scanner sc = new Scanner(System.in);
-        String pathSleepLogs = sc.next(); //E:\Users\artem\IdeaProjects\Sprint8\sleeplogs.txt
+        String pathSleepLogs = sc.next();
         if (pathSleepLogs.isEmpty()){
             System.out.println("Укажите путь к файлу с логом сна");
             return;

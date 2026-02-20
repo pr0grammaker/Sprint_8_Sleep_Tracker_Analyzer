@@ -21,9 +21,6 @@ public class ChronotypeFunction implements Function<List<SleepingSession>, Sleep
         for (SleepingSession sleepingSession : sleepingSessions) {
             LocalDate nightDate = sleepingSession.getStart().toLocalDate();
 
-            LocalDateTime nightStart = nightDate.atTime(0, 0);
-            LocalDateTime nightEnd = nightDate.atTime(6, 0);
-
             boolean isNightSession = !sleepingSession.getStart().toLocalDate()
                     .equals(sleepingSession.getEnd().toLocalDate());
 
@@ -57,6 +54,6 @@ public class ChronotypeFunction implements Function<List<SleepingSession>, Sleep
             chronotype = Chronotype.PIGEON;
         }
 
-        return new SleepAnalysisResult("Пользователь по хронотипу является -> «%s»", chronotype.getDescription());
+        return new SleepAnalysisResult("Пользователь по хронотипу является ->", chronotype.getDescription());
     }
 }
