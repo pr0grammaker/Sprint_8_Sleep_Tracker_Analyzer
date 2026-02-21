@@ -3,9 +3,6 @@ package analysis;
 import sleeptracker.Chronotype;
 import sleeptracker.SleepAnalysisResult;
 import sleeptracker.SleepingSession;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.function.Function;
@@ -19,7 +16,6 @@ public class ChronotypeFunction implements Function<List<SleepingSession>, Sleep
         int pigeons = 0;
 
         for (SleepingSession sleepingSession : sleepingSessions) {
-            LocalDate nightDate = sleepingSession.getStart().toLocalDate();
 
             boolean isNightSession = !sleepingSession.getStart().toLocalDate()
                     .equals(sleepingSession.getEnd().toLocalDate());
